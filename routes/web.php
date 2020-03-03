@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', function()
+{
+  return view('home');
+});
+Route::get('/trabajos', function()
+{
+  return view('trabajos');
+});
+Route::get('/contacto', function()
+{
+  return view('contacto');
+});
+Route::get('/login', function()
+{
+  return view('login');
 });
