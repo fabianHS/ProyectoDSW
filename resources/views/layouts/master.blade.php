@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Pagina Fabian</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/app.js')}}"></script>
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <script src="{{secure_asset('js/app.js')}}"></script>
     <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
   </head>
   <body>
