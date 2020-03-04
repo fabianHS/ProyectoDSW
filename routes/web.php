@@ -15,19 +15,24 @@
     return view('welcome');
 });*/
 
+
 Route::get('/', function()
 {
-  return view('home');
+  return view('inicio');
 });
-Route::get('/trabajos', function()
-{
-  return view('trabajos');
-});
-Route::get('/contacto', function()
-{
-  return view('contacto');
-});
-Route::get('/login', function()
-{
-  return view('login');
-});
+
+Route::get('/trabajos','TrabajosController@getindex');
+Route::get('/trabajos/show/{id}','TrabajosController@getShow');
+Route::get('/trabajos/crear','TrabajosController@getCreate')->middleware('auth');
+Route::get('/trabajos/edit/{id}','TrabajosController@getEdit')->middleware('auth');
+
+
+Route::post('/trabajos/crear','TrabajosController@postCreate')->middleware('auth');
+Route::put('/trabajos/edit/{id}', 'TrabajosController@putEdit')->middleware('auth');
+Route::delete('trabajos/delete/{id}', 'TrabajosController@deleteDelete')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
+//});

@@ -9,6 +9,9 @@
         <a class="nav-link" href="/trabajos">Trabajos</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/trabajos/crear">Crear</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
       </li>
     </ul>
